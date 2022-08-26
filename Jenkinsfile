@@ -25,7 +25,7 @@ spec:
         container('aws') {
           sh "aws s3 ls"
           sh "echo test > test.txt"
-          sh "echo test > test2.txt"          
+          sh "aws s3 cp test.txt s3://197831068840-jenkins-irsa/test.txt"
         }
       }
     }
